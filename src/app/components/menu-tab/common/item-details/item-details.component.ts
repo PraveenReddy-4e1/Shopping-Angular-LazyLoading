@@ -70,7 +70,7 @@ export class ItemDetailsComponent implements OnInit {
   }
   
   pushToArray(arr, obj) {
-    const index = arr.findIndex((x) => ((x.item.category === obj.category)&&(x.item.id === obj.id)));
+    const index = arr.findIndex((x) => ((x.item.category === obj.category)&&(x.item.id === obj.id)&&(x.size === this.itemSizeselected)));
   
     if (index === -1) {
       let cartData = {

@@ -21,9 +21,12 @@
                 Size : {{data.size}}
             </div>
             <div class="col-md-2 mt-20 text-center">
-                $ {{data.item.price}}
+                 {{data.item.price | currency:'INR'}}
              </div>
-            <div class="col-md-2 mt-20 text-center">
+             <div class="col-md-1 mt-20 text-center">
+                 {{data.item.price * data.quantity | currency:'INR'}}
+            </div>
+            <div class="col-md-1 mt-20 text-center">
                 <i class="pi pi-times" style="cursor: pointer;" (click)="removeItem(index)"></i>
             </div>
 
@@ -32,7 +35,7 @@
     </div>
 
     <div class="checkout-box">
-        Total: <span class="subtotal">$ {{totalAmount | number : '1.2-2'}}</span>
+        Total: <span class="subtotal">{{totalAmount | currency:'INR'}}</span>
         <!-- <button type="button" class="btn btn-default">Check Out</button> -->
     </div>
 

@@ -10,6 +10,14 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "fr": "src/locale/messages.fr.xlf",
+          "es" : "src/locale/messages.es.xlf",
+          "ta" : "src/locale/messages.ta.xlf"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -62,7 +70,19 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "fr" : {
+              "localize": ["fr"],
+              "i18nMissingTranslation" : "error"
+          },
+          "es" : {
+            "localize": ["es"],
+            "i18nMissingTranslation" : "error"
+           },
+           "ta" : {
+            "localize": ["ta"],
+            "i18nMissingTranslation" : "error"
+        }
           }
         },
         "serve": {
@@ -73,7 +93,18 @@
           "configurations": {
             "production": {
               "browserTarget": "shopping-Angular:build:production"
-            }
+            },
+            "fr": {
+              "browserTarget": "shopping-Angular:build:fr"
+            },
+            "es": {
+              "browserTarget": "shopping-Angular:build:es"
+ 
+          },
+          "ta": {
+            "browserTarget": "shopping-Angular:build:ta"
+
+        }
           }
         },
         "extract-i18n": {

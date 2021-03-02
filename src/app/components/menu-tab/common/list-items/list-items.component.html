@@ -8,7 +8,7 @@
     <li class="text-center" (click)="getDetails(item)">
         <img [src]="item.image ? restService.imageUrl+item.image: ''" alt="{{item.title}}">
         <div class="title">{{item.title}}</div>
-        <span class="price">${{item.price}}</span>
+        <span class="price">{{item.price | currency:'INR'}}</span>
     </li>
 </ng-container>
 </ul>
